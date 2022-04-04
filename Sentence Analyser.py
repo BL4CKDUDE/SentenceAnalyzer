@@ -1,7 +1,6 @@
 from flask import Flask,request,jsonify
 from flask_restful import Resource, Api, reqparse
 import nltk
-import pandas as pd
 import nltk.corpus
 # nltk.download('stopwords')
 import nltk.tokenize.punkt
@@ -251,53 +250,53 @@ def database_run():
     # =============================================================================
     
     
-def csv_run():
-    df = pd.read_csv('Compressed_Skills.csv')
+# def csv_run():
+#     df = pd.read_csv('Compressed_Skills.csv')
      
         
-    map_users_csv = df[['Expert', 'Recognized Skil Reference:Title']]
+#     map_users_csv = df[['Expert', 'Recognized Skil Reference:Title']]
     
-    c = map_users_csv.shape[0]
+#     c = map_users_csv.shape[0]
     
     
     
-    for i in range(c):
+#     for i in range(c):
         
-        dirty_xpt_list = map_users_csv['Expert'].iloc[i]
-        dirty_skill_list = map_users_csv['Recognized Skil Reference:Title'].iloc[i]
+#         dirty_xpt_list = map_users_csv['Expert'].iloc[i]
+#         dirty_skill_list = map_users_csv['Recognized Skil Reference:Title'].iloc[i]
         
-        dirty_xpt_list = str(dirty_xpt_list)
-        dirty_skill_list = str(dirty_skill_list)
+#         dirty_xpt_list = str(dirty_xpt_list)
+#         dirty_skill_list = str(dirty_skill_list)
         
-        if dirty_xpt_list == "nan":
-            dirty_xpt_list = "no expert found"
-            print(dirty_xpt_list)
-        else:
+#         if dirty_xpt_list == "nan":
+#             dirty_xpt_list = "no expert found"
+#             print(dirty_xpt_list)
+#         else:
             
-            xpt_array = dirty_xpt_list.split(";")
-            skill_array = dirty_skill_list.split(";")
+#             xpt_array = dirty_xpt_list.split(";")
+#             skill_array = dirty_skill_list.split(";")
             
-            xpt_list_former = ''
-            skill_list_former = ''
+#             xpt_list_former = ''
+#             skill_list_former = ''
             
-            for j in range(len(xpt_array)):
+#             for j in range(len(xpt_array)):
                 
-                if j < len(xpt_array)-1:
-                    xpt_list_former = xpt_list_former + xpt_array[j] + ',' 
-                else:
-                    xpt_list_former = xpt_list_former + xpt_array[j]
+#                 if j < len(xpt_array)-1:
+#                     xpt_list_former = xpt_list_former + xpt_array[j] + ',' 
+#                 else:
+#                     xpt_list_former = xpt_list_former + xpt_array[j]
                     
             
-            for k in range(len(skill_array)):
-                if k < len(skill_array)-1:
-                    skill_list_former = skill_list_former + skill_array[k] + ',' 
-                else:
-                    skill_list_former = skill_list_former + skill_array[k]
+#             for k in range(len(skill_array)):
+#                 if k < len(skill_array)-1:
+#                     skill_list_former = skill_list_former + skill_array[k] + ',' 
+#                 else:
+#                     skill_list_former = skill_list_former + skill_array[k]
                
             
-            map_xpts[i] = [xpt_list_former, skill_list_former]
+#             map_xpts[i] = [xpt_list_former, skill_list_former]
             
-    print("CSV FILE RUN COMPLETED")
+#     print("CSV FILE RUN COMPLETED")
     
     # CALCULATE TIME
 def get_time():
