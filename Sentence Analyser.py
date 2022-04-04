@@ -3,7 +3,7 @@ from flask_restful import Resource, Api, reqparse
 import nltk
 import pandas as pd
 import nltk.corpus
-nltk.download('stopwords')
+# nltk.download('stopwords')
 import nltk.tokenize.punkt
 import nltk.stem.snowball
 import time
@@ -43,7 +43,7 @@ api = Api(app)
 # HTTP requestion class
 @app.route('/')
 def initial():
-    return "Welcome to the Sentence Matcher Python Model Model"
+    return "Welcome to the Sentence Matcher Python Model."
 
 @app.route('/request', methods=["GET", "POST"])
 def get():
