@@ -29,6 +29,19 @@ jobs:
       
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Install dependencies
+        run: pip install pyobdc
+
+      - name: Install dependencies
+        run: pip install nltk
+
+      - name: Install dependencies
+        run: pip install pandas
+
+      - name: Install dependencies
+        run: pip install flask_restful
+   
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
