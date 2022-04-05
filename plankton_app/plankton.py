@@ -42,13 +42,10 @@ stopwords.append('')
 # Create tokenizer and stemmer
 tokenizer = WordPunctTokenizer()
 
-# Import CSV for member skills
-
-
 # HTTP requestion class
 @app.route('/')
 def initial():
-    return "Welcome to the Sentence Matcher Python Model."
+    return "Welcome to the Sentence Matcher Python Model 19:49 Tuesday."
 
 @app.route('/request')
 def get():
