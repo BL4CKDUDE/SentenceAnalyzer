@@ -1,1 +1,0 @@
-from plankton_app.webapp import app
