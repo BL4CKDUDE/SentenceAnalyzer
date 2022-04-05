@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,request
 from . import app
 from flask_restful import Api
 import nltk
@@ -42,7 +42,7 @@ tokenizer = WordPunctTokenizer()
 def initial():
     return "Welcome to the Sentence Matcher Python Model."
 
-@app.route('/request', methods=["GET", "POST"])
+@app.route('/request')
 def get():
   
     #parser.add_argument('qs', required=True)
